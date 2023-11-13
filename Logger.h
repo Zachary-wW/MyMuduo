@@ -65,7 +65,7 @@ enum LogLevel
 };
 
 // 输出一个日志类
-class Logger : noncopyable
+class Logger : noncopyable // 默认private继承
 {
 public:
     // 获取日志唯一的实例对象

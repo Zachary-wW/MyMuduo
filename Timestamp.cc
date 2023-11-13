@@ -10,7 +10,8 @@ Timestamp::Timestamp(int64_t microSecondsSinceEpoch)
 
 Timestamp Timestamp::now()
 {
-    return Timestamp(time(NULL)); // 输入NULL就代表不存储到指针内
+    // 输入NULL就代表不存储到指针内
+    return Timestamp(time(NULL));
 }
 
 std::string Timestamp::toString() const
@@ -26,10 +27,3 @@ std::string Timestamp::toString() const
         tm_time->tm_sec);
     return buf;
 }
-
-// #include <iostream>
-// int main()
-// {
-//     std::cout << Timestamp::now().toString() << std::endl; 
-//     return 0;
-// }

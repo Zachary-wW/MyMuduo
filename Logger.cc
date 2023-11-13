@@ -4,8 +4,10 @@
 #include <iostream>
 
 // 获取日志唯一的实例对象
+// C++单例模式（懒汉式）的实现方法
 Logger& Logger::instance()
 {
+    // 定义了一个局部静态的对象（初始化一次，不使用不创建）
     static Logger logger;
     return logger;
 }
